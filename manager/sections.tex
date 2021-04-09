@@ -1,0 +1,81 @@
+
+GJS:
+  We should make it so there is a subdirectory for each flavor, and the
+  subdirectory names should correspond to the names of the sections.
+
+(pp (manage 'list-flavors))
+(automatic-differentiation
+ checkers-new
+ checkers-old
+ checkers-original
+ combinators
+ combining-arithmetics
+ compiling-to-execution-procedures
+ continuations
+ continuations-to-amb
+ dependencies
+ design-of-the-matcher
+ efficient-generics-cached
+ efficient-generics-trie
+ exploratory-behavior
+ generic-interpreter
+ generic-procedures
+ layers
+ non-strict-arguments
+ pattern-matching-on-graphs
+ propagation
+ regular-expressions
+ term-rewriting
+ unification
+ user-defined-types
+ wrappers)
+
+
+Old text is below line
+
+-------------------------------------------------------
+
+\begin{tabular}{ r l }
+Book section & Subdirectory name \\ \hline
+Section~\ref{sec:combinators} & \code{combinators} \\
+Section~\ref{sec:RegularExpressions} & \code{regular-expressions} \\
+Section~\ref{sec:wrappers} & \code{wrappers} \\
+Section~\ref{sec:monolithic} & \code{checkers-original} \\
+Section~\ref{sec:factoring-out-domain} & \code{checkers-new} \\
+Section~\ref{sec:ArithmeticCombinators} & \code{combining-arithmetics} \\
+Section~\ref{sec:extensible} & \code{generic-procedures} \\
+Section~\ref{sec:AutomaticDifferentiation} & \code{automatic-differentiation} \\
+Section~\ref{sec:efficient} & \code{efficient-generic-procedures} \\
+Section~\ref{sec:user-defined-types} & \code{user-defined-types} \\
+
+%No code here
+%Section~\ref{sec:patterns-and-rules} & \code{patterns} \\
+Section~\ref{sec:term-rewriting} & \code{term-rewriting} \\
+Section~\ref{sec:design-of-the-matcher} & \code{design-of-the-matcher} \\
+Section~\ref{sec:Unification} & \code{unification} \\
+Section~\ref{sec:pattern-matching-on-graphs} & \code{pattern-matching-on-graphs} \\
+Section~\ref{sec:generic-interpreter} & \code{generic-interpreter} \\
+Section~\ref{sec:non-strict-arguments} & \code{non-strict-arguments} \\
+Section~\ref{sec:compiling-to-execution-procedures} & \code{compiling-to-execution-procedures} \\
+Section~\ref{sec:nondeterministic-execution} & \code{exploratory-behavior} \\
+Section~\ref{sec:continuations} & \code{continuations} \\
+Section~\ref{sec:continuations-to-amb} & \code{continuations-to-amb} \\
+Chapter~\ref{chap:Layering} & \code{layers} \\
+Section~\ref{sec:Dependencies} & \code{dependencies} \\
+Chapter~\ref{chap:Propagation} & \code{propagation}
+\end{tabular}
+
+%jems: if desired can force flavor table onto this page with \longpage
+%\pagekludge{\longpage}
+Usually, the name of a subdirectory can be used as an argument to
+\code(manage 'new-environment ...).  When used in this context, the
+subdirectory name is called a \dfn{flavor}.  However, some of the
+subdirectories have multiple flavors, and in those cases the available
+flavor names differ from the subdirectory names:
+\begin{tabular}{ r l }
+Subdirectory & flavors \\ \hline
+\code{abstracting-a-domain} & \code{checkers-old} \\
+\  & \code{checkers-new} \\
+\code{efficient-generic-procedures} & \code{efficient-generics-trie} \\
+\  & \code{efficient-generics-cached}
+\end{tabular}
